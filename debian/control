@@ -1,0 +1,19 @@
+Source: ubuntu-gnome-remix-live
+Maintainer: Dmitriy Safronov <zimniy@cyberbrain.pw>
+Build-Depends: debhelper-compat (= 12)
+Section: metapackages
+Priority: optional
+Standards-Version: 4.5.0
+
+Package: ubuntu-gnome-remix-live
+Architecture: all
+# Section: metapackages
+# Priority: optional
+# Pre-Depends: <comma-separated list of packages>
+Depends: ubuntu-gnome-remix-desktop
+Recommends: gparted
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+# Replaces: <comma-separated list of packages>
+Description: Ubuntu GNOME remix live session metapackage
+ Holds dependencies for Ubuntu GNOME live session
