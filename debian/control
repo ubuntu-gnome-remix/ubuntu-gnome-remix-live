@@ -10,8 +10,8 @@ Architecture: all
 # Section: metapackages
 # Priority: optional
 # Pre-Depends: <comma-separated list of packages>
-Depends: ubuntu-gnome-remix-desktop
-Recommends: gparted
+Depends: casper, ubuntu-gnome-remix-desktop
+Recommends: gparted, hfsprogs, hfsutils, jfsutils, nilfs-tools, reiser4progs, reiserfsprogs, xfsprogs, dmraid, gnome-tour
 # Suggests: <comma-separated list of packages>
 # Provides: <comma-separated list of packages>
 # Replaces: <comma-separated list of packages>
