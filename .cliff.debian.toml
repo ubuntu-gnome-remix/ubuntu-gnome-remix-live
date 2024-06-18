@@ -9,7 +9,7 @@ body = """
 ({{ version | trim_start_matches(pat="v") }}) unstable; urgency=low\
 {% else %}\
 (9999.9999.9999) UNRELEASED;\
-{% endif %}\n
+{% endif %}
 {% for commit in commits %}
   * {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
     {% if commit.breaking %}[**breaking**] {% endif %}\
