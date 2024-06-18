@@ -1,0 +1,48 @@
+name: Tag [release]
+"on":
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+jobs:
+  tag_release:
+    name: Tag [release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.6
+        with:
+          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+
+      - name: Update release description .CHANGELOG.md
+        uses: orhun/git-cliff-action@v3.2.0
+        id: changelog-release
+        with:
+          config: .cliff.release.toml
+          args: --current --strip all
+        env:
+          OUTPUT: .CHANGELOG.md
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: false
+          name: ${{ github.ref_name }}
+          body: ${{ steps.changelog-release.outputs.content }}
+          token: ${{ secrets.PAT }}
+
+      - name: Publish to PPA
+        uses: dmitriysafronov/publish-ppa-package@main
+        with:
+          repository: ${{ vars.PPA_REPOSITORY }}
+          gpg_private_key: ${{ secrets.PPA_GPG_PRIVATE_KEY }}
+          gpg_passphrase: ${{ secrets.PPA_GPG_PASSPHRASE }}
+          # tarball: debian/artifacts/*.tar.*
+          debian_dir: debian
+          deb_email: ${{ vars.PPA_EMAIL }}
+          deb_fullname: ${{ vars.PPA_FULLNAME }}
+          # revision: ${{ vars.PPA_REVISION }}
+          # series: ${{ vars.PPA_SERIES }}
+          # extra_series: ${{ vars.PPA_SERIES_EXTRA }}
