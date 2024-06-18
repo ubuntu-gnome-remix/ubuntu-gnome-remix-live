@@ -28,7 +28,7 @@ jobs:
         with:
           allowUpdates: true
           draft: false
-          makeLatest: false
+          makeLatest: true
           name: ${{ github.ref_name }}
           body: ${{ steps.changelog-release.outputs.content }}
           token: ${{ secrets.PAT }}
