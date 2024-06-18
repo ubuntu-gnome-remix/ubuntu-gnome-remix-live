@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2024-06-18
+
+### 🚀 Features
+
+- Dependencies
+
 ## [0.1.1] - 2024-06-18
 
 ### 🐛 Bug Fixes

@@ -1,9 +1,16 @@
+ubuntu-gnome-remix-live (0.2.0) unstable; urgency=low
+
+
+  * Dependencies
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:44:44 +0000
+
 ubuntu-gnome-remix-live (0.1.1) unstable; urgency=low
 
 
   * Latest
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:31:43 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:31:44 +0000
 
 ubuntu-gnome-remix-live (0.1.0) unstable; urgency=low
 
