@@ -36,7 +36,7 @@ jobs:
 
       - name: Update debian/changelog
         if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
-        uses: orhun/git-cliff-action@v3
+        uses: orhun/git-cliff-action@v4
         with:
           config: .cliff.debian.toml
           args: --tag ${{ steps.semver.outputs.next }}
@@ -45,7 +45,7 @@ jobs:
 
       - name: Update CHANGELOG.md
         if: "${{ ! startsWith(github.event.head_commit.message, 'docs: update changelogs & version for ') && steps.semver.outputs.next != '' }}"
-        uses: orhun/git-cliff-action@v3
+        uses: orhun/git-cliff-action@v4
         with:
           config: .cliff.git.toml
           args: --tag ${{ steps.semver.outputs.next }}
