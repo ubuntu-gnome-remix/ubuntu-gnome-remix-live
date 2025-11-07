@@ -1,8 +1,16 @@
+ubuntu-gnome-remix-live (0.2.2) unstable; urgency=low
+
+  * Bump
+  * Update push-create_tag.yaml
+  * Update README.md
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Fri, 07 Nov 2025 11:06:30 +0000
+
 ubuntu-gnome-remix-live (0.2.1) unstable; urgency=low
 
   * \n
 
- -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:54:52 +0000
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:54:53 +0000
 
 ubuntu-gnome-remix-live (0.2.0) unstable; urgency=low
 
@@ -21,4 +29,9 @@ ubuntu-gnome-remix-live (0.1.0) unstable; urgency=low
   * Initial content (#1)
 
  -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:21:50 +0000
+
+ubuntu-gnome-remix-live (0.0.1) unstable; urgency=low
+
+
+ -- Dmitriy Safronov <zimniy@cyberbrain.pw>  Tue, 18 Jun 2024 19:09:32 +0000
 
